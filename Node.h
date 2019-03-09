@@ -1,6 +1,6 @@
 //
 // Created by jose on 05/03/19.
-//
+//http://c.conclase.net/edd/?cap=001g
 
 #ifndef TAREAEXTRACLASE_3_NODE_H
 #define TAREAEXTRACLASE_3_NODE_H
