@@ -11,17 +11,19 @@ using namespace std;
 class Node {
 
 public:
-    Node(int val, Node *nex = NULL) {
+
+    Node(int val, Node* nex = NULL) {
         value = val;
         next = nex;
     }
 
     //Atributos con los que contará la clase.
     int value;
-    Node *next;
+    Node* next;
 
     //Métodos con los que contará la clase.
     void setNodeValue(int value);
+
     int getNodeValue();
 
     friend class List;

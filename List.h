@@ -10,6 +10,7 @@
 
 class List {
 public:
+
     List() { first = actual = NULL; }
     ~List();
 
@@ -26,7 +27,6 @@ public:
 private:
     pnode first;
     pnode actual;
-
 
 };
 

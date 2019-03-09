@@ -65,7 +65,7 @@ void List::Delete (int value) {
 
 
 void List::Show() {
-    Node *aux;
+    Node* aux;
 
     aux = first;
     while(aux) {

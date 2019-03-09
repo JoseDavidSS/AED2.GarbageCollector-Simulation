@@ -1,8 +1,9 @@
 #include <iostream>
 #include "List.h"
+#include "Collector.h"
 
 int main() {
-    List list;
+    /*List list;
 
     list.Insert(20);
     list.Insert(10);
@@ -29,6 +30,15 @@ int main() {
     list.Delete(30);
     list.Delete(40);
 
-    list.Show();
+    list.Show();*/
+
+    Node node = Node(12);
+    Collector collector;
+    collector.newMemoryUse(&node);
+    Node node2 = Node(41);
+    collector.newMemoryUse(&node2);
+    Node node3 = Node(21);
+    collector.newMemoryUse(&node3);
+
     return 0;
 }
