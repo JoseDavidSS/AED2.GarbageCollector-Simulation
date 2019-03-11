@@ -28,4 +28,36 @@ void Collector::newMemoryUse(Node* memoryUsed) {
     }
 }
 
-void Collector::deleteMemory() {}
+void Collector::deleteMemory(Node* freeMemory) {
+    if (this->head->memory == freeMemory){
+        this->head->setInUse(false);
+    }else{
+        CollectorNode* tmp = this->head;
+        while (tmp != nullptr){
+            if (tmp->memory == freeMemory){
+                tmp->setInUse(false);
+                break;
+            }else{
+                tmp = tmp->next;
+            }
+        }
+    }
+}
+
+Node* Collector::checkFreeMemory() {
+    if (!this->head->isInUse()){
+        this->head->setInUse(true);
+        return this->head->memory;
+    }else{
+        CollectorNode* tmp = this->head;
+        while (tmp != nullptr){
+            if (!tmp->isInUse()){
+                tmp->setInUse(true);
+                return tmp->memory;
+            }else{
+                tmp = tmp->next;
+            }
+        }
+        return nullptr;
+    }
+}

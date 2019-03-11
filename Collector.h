@@ -21,7 +21,8 @@ public:
     int getLenght() const;
     void setLenght(int lenght);
     void newMemoryUse(Node* memoryUsed);
-    void deleteMemory();
+    void deleteMemory(Node* freeMemory);
+    Node* checkFreeMemory();
 
 
 private:
