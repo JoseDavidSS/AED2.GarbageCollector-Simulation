@@ -1,7 +1,3 @@
-//
-// Created by jose on 05/03/19.
-//http://c.conclase.net/edd/?cap=001g
-
 #ifndef TAREAEXTRACLASE_3_NODE_H
 #define TAREAEXTRACLASE_3_NODE_H
 
@@ -19,18 +15,12 @@ public:
 
     //Atributos con los que contará la clase.
     int value;
-    Node* next;
+    Node* next = nullptr;
 
     //Métodos con los que contará la clase.
     void setNodeValue(int value);
-
     int getNodeValue();
 
-    friend class List;
-
 };
-
-typedef Node *pnode;
-
 
 #endif //TAREAEXTRACLASE_3_NODE_H
