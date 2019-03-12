@@ -7,4 +7,5 @@ void Node::setNodeValue(int value){
 
 int Node::getNodeValue() {
     return this->value;
+
 }
