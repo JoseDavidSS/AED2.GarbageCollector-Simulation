@@ -1,6 +1,14 @@
 #include "Collector.h"
 
 using namespace std;
+Collector* Collector::collector = nullptr;
+
+Collector* Collector::getInstance() {
+    if (!collector){
+        collector = new Collector;
+    }
+    return collector;
+}
 
 int Collector::getLenght() const {
     return this->lenght;
@@ -41,7 +49,10 @@ void Collector::deleteMemory(Node* freeMemory) {
 }
 
 Node* Collector::checkFreeMemory() {
-    if (!this->head->isInUse()){
+    if (this->head == nullptr){
+        return nullptr;
+    }
+    else if (!this->head->isInUse()){
         this->head->setInUse(true);
         return this->head->memory;
     }else{

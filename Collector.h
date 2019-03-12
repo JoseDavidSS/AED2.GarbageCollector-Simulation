@@ -10,10 +10,9 @@ class Collector {
 
 public:
 
-    Collector() = default;
-
     int lenght = 0;
 
+    static Collector* getInstance();
     int getLenght() const;
     void setLenght(int lenght);
     void newMemoryUse(Node* memoryUsed);
@@ -23,6 +22,11 @@ public:
 
 private:
 
+    Collector() = default;
+    Collector(Collector const&) = default;
+    Collector& operator = (Collector const&) = default;
+
+    static Collector* collector;
     CollectorNode* head = nullptr;
 
 };

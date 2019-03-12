@@ -3,8 +3,10 @@
 
 
 #include "Node.h"
+#include "Collector.h"
 
 class List {
+
 public:
 
     List() = default;
@@ -17,11 +19,9 @@ public:
     void deleteNode (int value);
     void printList ();
 
-
-
 private:
-    Node* head = nullptr;
 
+    Node* head = nullptr;
 
 };
 #endif //TAREAEXTRACLASE_3_LIST_H

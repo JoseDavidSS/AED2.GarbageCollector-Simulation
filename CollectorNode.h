@@ -18,7 +18,7 @@ public:
         memory = mem;
     };
 
-    bool inUse = true;
+    bool inUse = false;
     Node* memory;
     CollectorNode* next = nullptr;
 

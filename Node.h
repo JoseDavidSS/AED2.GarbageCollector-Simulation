@@ -8,7 +8,7 @@ class Node {
 
 public:
 
-    Node(int val, Node* nex = NULL) {
+    Node(int val, Node* nex = nullptr) {
         value = val;
         next = nex;
     }
