@@ -44,12 +44,14 @@ void List::deleteNode(int value){
     }else if(this->head->value == value){
         collector->newMemoryUse(this->head);
         this->head = this->head->next;
+        setLenght(getLenght()-1);
     }else{
         Node* tmp = this->head;
         while (tmp->next != nullptr){
             if (tmp->next->value == value){
                 collector->newMemoryUse(tmp->next);
                 tmp->next = tmp->next->next;
+                setLenght(getLenght()-1);
                 break;
             }else{
                 tmp = tmp->next;
