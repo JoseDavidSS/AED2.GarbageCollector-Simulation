@@ -24,6 +24,7 @@ TEST(List_Test, List_Test_List_Lenght_When_Full){
     list.deleteNode(2);
     list.printList();
     EXPECT_EQ(2, list.getLenght());
+
 }
 
 int main(int argc, char* argv[]) {
