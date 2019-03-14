@@ -17,6 +17,7 @@ public:
     void setLenght(int lenght);
     void newMemoryUse(Node* memoryUsed);
     Node* checkFreeMemory();
+    CollectorNode* head = nullptr;
 
 
 private:
@@ -26,7 +27,6 @@ private:
     Collector& operator = (Collector const&) = default;
 
     static Collector* collector;
-    CollectorNode* head = nullptr;
 
 };
 

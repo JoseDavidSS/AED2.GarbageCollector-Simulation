@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/**
+ * This is method is used to get the lenght
+ * @return the lenght value
+ */
 int List::getLenght() const {
     return this->lenght;
 }
@@ -11,6 +15,10 @@ void List::setLenght(int lenght) {
     this->lenght = lenght;
 }
 
+/**
+ * This method is used to add an element to the simple list
+ * @param value is the node value
+ */
 void List::insertNode(int value){
     Collector* collector = Collector::getInstance();
     Node* node = collector->checkFreeMemory();
@@ -37,6 +45,10 @@ void List::insertNode(int value){
     }
 }
 
+/**
+ * This method is used to delete an element of the simple list
+ * @param value is used to search the node that is going to be eliminated
+ */
 void List::deleteNode(int value){
     Collector* collector = Collector::getInstance();
     if (this->head == nullptr){
@@ -60,6 +72,9 @@ void List::deleteNode(int value){
     }
 }
 
+/**
+ * This method is used to print all elements of the simple list
+ */
 void List::printList (){
     if (this->head == nullptr){
         printf("Lista nula");
