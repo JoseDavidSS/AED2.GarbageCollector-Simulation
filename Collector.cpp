@@ -37,14 +37,14 @@ void Collector::setLenght(int lenght) {
 void Collector::newMemoryUse(Node* memoryUsed) {
     if (this->head == nullptr){
         this->head = new CollectorNode(memoryUsed);
-        setLenght(this->lenght + 1);
+        this->lenght++;
     }else{
         CollectorNode* tmp = this->head;
         while (tmp->next != nullptr){
             tmp = tmp->next;
         }
         tmp->next = new CollectorNode(memoryUsed);
-        setLenght(this->lenght+1);
+        this->lenght++;
     }
 }
 

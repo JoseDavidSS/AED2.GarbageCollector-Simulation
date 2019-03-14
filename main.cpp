@@ -27,8 +27,7 @@ TEST(List_Test, List_Test_List_Lenght_When_Full){
 
     //Testing Collector
     Collector* collector = Collector::getInstance();
-    collector->getLenght();
-    printf("hola");
+    EXPECT_EQ(2, collector->getLenght());
 }
 
 int main(int argc, char* argv[]) {
